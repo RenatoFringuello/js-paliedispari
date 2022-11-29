@@ -14,9 +14,15 @@ function isPalindrome(word){
 function isEven(num){
     return (num % 2 === 0);
 }
+//random num generator max inclusive function
 function rand(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+function getWinner(userInputs, comNum){
+    let sum = userInputs.num + comNum;
+    return (isEven(sum) === userInputs.pick);
+}
+
 
 
 
