@@ -1,4 +1,7 @@
-//palindrome words
+/**--------------------------------------------------------------------
+ *                              FUNCTIONS
+ --------------------------------------------------------------------*/
+//palindrome words verifier fn(x)
 function isPalindrome(word){
     for (let i = 0; i < word.length; i++) {
         if(word[i] !== word[word.length - 1 - i]){
@@ -7,11 +10,24 @@ function isPalindrome(word){
     }
     return true;
 }
+//even (or odd if false) num verifier fn(x)
+function isEven(num){
+    return (num % 2 === 0);
+}
 
-const userWord = document.getElementById('user-word');
-const sendBtn = document.getElementById('send');
-const result = document.getElementById('result');
 
-sendBtn.addEventListener('click', function(){
-    result.innerHTML = (isPalindrome(userWord.value)) ? 'The word is palindrome' : 'Sorry, the word isn\'t palindrome, try again';
+/**--------------------------------------------------------------------
+ *                              VARIABLES
+ --------------------------------------------------------------------*/
+//palindrome variables
+const userWordPalindrome = document.querySelector('#palindrome .user-word');
+const sendBtnPalindrome = document.querySelector('#palindrome .send');
+const resultPalindrome = document.querySelector('#palindrome .result');
+
+/**--------------------------------------------------------------------
+ *                              EVENTS
+ --------------------------------------------------------------------*/
+//palindrome send btn onclick
+sendBtnPalindrome.addEventListener('click', function(){
+    resultPalindrome.innerHTML = (isPalindrome(userWordPalindrome.value)) ? 'The word is palindrome' : 'Sorry, the word isn\'t palindrome, try again';
 });

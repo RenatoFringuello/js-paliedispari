@@ -8,17 +8,37 @@
 </head>
 <body>
     <main>
-        <form>
-            <label for="user-word">
-                Insert a word to check if is palindrome
-            </label>
-            <input type="text" name="user-word" id="user-word" placeholder="Type something ...">
-            <button type="button" id="send">Send</button>
-        </form>
-        <p>
-            <h1>Result :</h1>
-            <pre id="result"></pre>
-        </p>
+        <!-- palindrome verifier -->
+        <section id="palindrome">
+            <h1>Palindrome</h1>
+            <form>
+                <label for="user-word">
+                    Insert a word to check if is palindrome
+                </label>
+                <input type="text" name="user-word" class="user-word" placeholder="Type something ...">
+                <button type="button" class="send">Send</button>
+            </form>
+            <p>
+                <h1>Result :</h1>
+                <pre class="result"></pre>
+            </p>
+            <hr>
+        </section>
+        <!-- evens & odds -->
+        <section id="even-odd">
+            <h1>Even or Odd</h1>
+            <form>
+                <label for="user-word">
+                    Insert a number to check if is even or odd
+                </label>
+                <input type="number" name="user-word" class="user-word" placeholder="Type a number ...">
+                <button type="button" class="send">Send</button>
+            </form>
+            <p>
+                <h1>Result :</h1>
+                <pre class="result"></pre>
+            </p>
+        </section>
     </main>
     
     <script src="./js/script.js"></script>
