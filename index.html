@@ -27,11 +27,17 @@
         <!-- evens & odds -->
         <section id="even-odd">
             <h1>Even or Odd</h1>
+            <p>Pick a type of number (even or odd) and type a number between 1 and 5, it will display if your number + a random number it will be even or odd. If it's like your pick you win</p>
             <form>
-                <label for="user-word">
-                    Insert a number to check if is even or odd
+                <select class="user-pick">
+                    <option value="1">even</option>
+                    <option value="0">odd</option>
+                </select>
+                <label for="user-num">
+                    Insert a number
                 </label>
-                <input type="number" name="user-word" class="user-word" placeholder="Type a number ...">
+                <input type="number" name="user-num" class="user-num" placeholder="Type a number between 1 - 5 ...">
+            
                 <button type="button" class="send">Send</button>
             </form>
             <p>
