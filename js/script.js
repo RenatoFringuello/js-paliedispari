@@ -24,7 +24,7 @@ function rand(min, max){
  * @param {*} sum : just a sum between number, must be user number + rand(1,5)
  * @returns true if the sum between uNum and a rand(1,5) is == uPick, even or odd
  */
-function getWinner(uPick, sum){
+function isWinner(uPick, sum){
     return (isEven(sum) == uPick);
 }
 
@@ -66,7 +66,7 @@ sendBtnEvenOdd.addEventListener('click', function(){
         //get the winner and display in #even-odd .result
         default:
             let sum = n + rand(1,5);
-            resultEvenOdd.innerHTML = (getWinner(userPickEvenOdd.value, sum)) 
+            resultEvenOdd.innerHTML = (isWinner(userPickEvenOdd.value, sum)) 
             ? `you win<br>the sum is (${n} + ${sum - n}) = ${sum}` 
             : `Sorry, you lose<br>the sum is (${n} + ${sum - n}) = ${sum}`;
             break;
